@@ -1,0 +1,211 @@
+\documentclass[12pt,oneside]{book}
+\usepackage{ulamonog} %proyecto de grado
+%\usepackage[ansinew]{inputenc} % escribir acentos
+\usepackage[utf8]{inputenc}
+%\usepackage[activeacute,spanish]{babel}
+\usepackage{moreverb}
+\usepackage[none]{hyphenat}
+\usepackage{color}
+\usepackage{hyperref}
+%\usepackage[open, openlevel=1]{bookmark}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage[numbers,sort]{natbib}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+% ***************************************************************** %
+% En el siguiente comando se pueden modificar (para el archivo .pdf):
+% Titulo, Autor, Palabras clave
+% ***************************************************************** %
+
+% si se va a imprimir,
+% se incluye al final despues de citecolor=blue, el comando draft=true
+
+\hypersetup{
+pdftitle={ProyectoDeGrado},
+pdfauthor={Autor},
+pdfsubject={Proyecto de Grado}, % se deja igual
+pdfkeywords={Palabras,claves,muchas,pocas}, 
+pdfstartview=FitH,
+citecolor=blue,
+colorlinks=true,
+linkcolor=black,
+%hidelinks
+%draft=true
+}
+
+% Si desea que no aparezca la lista de tablas o figuras descomente las siguientes lineas
+\nolistoftables
+\nolistoffigures
+
+% ***************************************************************** %
+% FIN DE
+% Titulo, Autor, Palabras clave
+% ***************************************************************** %
+
+\sloppy
+
+\begin{document}
+\frontmatter
+
+% ***************************************************************** %
+% Si sabe la fecha de presentación del Proyecto de Grado
+% con o sin comentar
+% ***************************************************************** %
+
+%\fechaentrega{Junio} % Si sabe cuando se presentó
+%\presentaciondia{2 de Junio} % si conoce exactamente el día
+%\presentacionlugar{Laboratorio 226 de EISULA} % si conoce exactamente el lugar donde se presentó
+
+% ***************************************************************** %
+% FIN DE
+% Si sabe la fecha de presentación
+% ***************************************************************** %
+
+% ***************************************************************** %
+% Si el Proyecto de Grado tiene mencion especial
+% con o sin comentar
+% ***************************************************************** %
+
+%\mencionespecial{Este proyecto fue seleccionado como \textbf{mejor proyecto de grado} de la Escuela de
+%Ingeniería de Sistemas, en el IC aniversario de la Facultad de Ingeniería.} % si tiene mención especial
+
+% ***************************************************************** %
+% FIN DE
+% Si sabe la fecha de presentación
+% con o sin comentar
+% ***************************************************************** %
+
+% ***************************************************************** %
+% Portada y resumen
+% ***************************************************************** %
+% Si desea el logo en la parte de abajo
+%\logoabajo
+
+% En caso de que el año sea diferente al actual, quite el comentario a la siguiente linea
+%\copyrightyear{2007}
+
+% Al final cuando hayan presentado, sin comentar
+% deberia ser el número de tesis presentada y la opción, IO por ejemplo
+% Numero del proyecto
+%\numproy{00IO}
+
+% Puede cambiar el tipo de monografía, por defecto: Proyecto de Grado
+%\tipomonografia{Informe Final de Proyecto de Grado}
+
+% En caso de hacer propuesta de proyecto, quitele el comentario a la
+% siguiente linea --- En este caso no aparece ni la hoja de presentacion
+% ni la hoja de dedicatoria
+\propuesta
+
+% Si se utiliza este formato para hacer un informe técnico, descomente las siguientes líneas
+%\informe %
+%\proyecto{} % Por ejemplo, puede colocar el nombre del proyecto al que esta asociado el informe técnico
+            % Ejemplos: \proyecto{Convenio ULA PDVSA}
+            % \proyecto{Canalizaciones del río Chama. Asesoría Alcaldía Municipio Libertador}
+
+% Datos del proyecto de grado
+\title{}
+\author{}
+\cedula{}
+\tutor{}
+%\cotutor{Dra. Puede Haber}
+%\primerjurado{Dr. Primer Profesor}
+%\segundojurado{Prof. Segundo Profesor}
+%\tercerjurado{Prof. Tercer Profesor}
+
+% NO TOCAR si es Ingenieria de Sistemas
+%\grado{Ingeniero Químico} % por defecto Ingeniero de Sistemas
+%\tutorname{Asesor} % por defecto es Tutor
+
+%\signaturepage ----- NO TOCAR
+
+\resumen{}
+
+\descriptores{}
+
+%\cota{IXD A01.1}
+
+% Si es control y automatizacion se comenta la siguiente linea
+\opcion{Sistemas Computacionales}
+
+% ***************************************************************** %
+% FIN DE
+% Portada y resumen
+% ***************************************************************** %
+
+
+% ***************************************************************** %
+% Si tiene dedicatoria
+% con o sin comentar
+% ***************************************************************** %
+\dedicatoria{No hay dedicatoria}
+
+% ***************************************************************** %
+% FIN DE
+% Si tiene dedicatoria
+% ***************************************************************** %
+
+\beforepreface
+
+% ***************************************************************** %
+% Agradecimientos y primer capitulo (sin numeracion)
+% ***************************************************************** %
+
+%\prefacesection{Agradecimientos}
+
+%En esta sección se agradece a las personas que contribuyeron a llevar a buen final este trabajo.
+
+%%% Capitulo sin numero, antes de la pagina 1
+\prefacesection{Introducción}
+%Un párrafo de introducción al área de trabajo (4 líneas)
+\afterpreface 
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{\textsc{\footnotesize\thechapter\ #1}}}
+\renewcommand{\sectionmark}[1]{\markright{\textsc{\footnotesize\thesection\ #1}}}
+\lhead[\fancyplain{}{\textsc{\footnotesize\thepage}}]%
+{\fancyplain{}{\rightmark}}
+\rhead[\fancyplain{}{\leftmark}]%
+{\fancyplain{}{\textsc{\footnotesize\thepage}}} \cfoot{}
+\mainmatter
+  
+%Ejemplo de citas \citep{Stall:04}	
+%\emph{Ejemplo de itálicas}
+%\bf{Ejemplo de negritas}
+% ***************************************************************** %
+% FIN DE
+% Agradecimientos y primer capitulo (sin numeracion)
+% ***************************************************************** %
+
+% ***************************************************************** %
+% Cuerpo
+% ***************************************************************** %
+
+\input{capitulo1}
+%\input{capitulo2}
+%\input{capitulo3}
+%\input{capitulo4}
+%\input{capitulo5}
+
+%\bibliographystyle{apalikesp}
+\bibliographystyle{IEEEannot}
+
+% ***************************************************************** %
+% Para agregar toda la bibliografia del archivo .bib
+% solo descomente el siguiente comando
+%\nocite{*}
+% ***************************************************************** %
+% ***************************************************************** %
+\bibliography{bibliografia}
+% ***************************************************************** %
+% FIN DE
+% Cuerpo
+% ***************************************************************** %
+\appendix
+\scriptsize
+%\verbatimtabinput[4]{pi.h}
+%\subsection{sch\_pi.c}
+%\verbatimtabinput[4]{sch\_pi.c}
+
+\end{document}
